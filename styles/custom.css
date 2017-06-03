@@ -1,0 +1,74 @@
+#nav{
+	border: 1px solid white;
+	background-color: white;
+	padding-top: 4px;
+	padding-bottom:4px;
+}
+#right{
+	padding-top:3px;
+}
+#brand{
+	font: bold 20px Tahoma
+ }
+#brand:hover{
+	color: #800000;
+	
+ }
+	.pull{
+	 float: right;
+ }
+#padding{
+	 padding-top:22px;
+	 font-size: 22px;
+ }
+ 
+
+ #c:hover{
+	 color: #800000;
+	 border-bottom: 3px solid red;
+ }
+#heart{
+	float: right;
+}
+
+#filter{
+	 border: 1px white;
+	 background-color: white;
+	 margin: 2px;
+ }
+#clear{
+	 text-align: right;
+ }
+
+ #grid_view{
+	 text-align:right;
+	 border: 1px solid black;
+ }
+ #Complete_bg{
+	 background-color: 	#D3D3D3;
+	 padding-top: 160px;
+}
+#dropdown{
+	width:100%
+}
+#pad{
+	margin: 4px;
+	padding-right:5px;
+}
+.footer{
+	background-color: black;
+	color: white;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	border-top: 2px solid gray;
+	border-bottom: 3px solid white;
+}
+.vertical{
+	border-left: 2px solid white;
+	height: 260px;
+	float: left;	
+}
+#copy{
+	padding-top:100px;
+	padding-bottom:10px;
+}

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ListUp Web Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/custom.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/custom.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+</head>
+<body id="Complete_bg">
+	<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a id="brand" href="https://instamotor.com/search">instamotor <br/><span> <img src="icons/car2.png"></span></a></li>
+            <li id="padding"><a id="c" href="#">Car Shopping</a></li>
+            <li id="padding"><a id="c" href="#">Sell Your Car</a></li>
+            <li class="dropdown" id="padding">
+				<a id="c" href="#" class="dropdown-toggle" data-toggle="dropdown">Learn More<span class="caret">
+					<ul class="dropdown-menu">
+						<li><a href="#">About</li>
+						<li><a href="#">Trust & Safety</li>
+						<li><a href="#">Contact Us</li>
+						<li><a href="#">Blog</li>
+						<li><a href="#">Press</li>
+						<li><a href="#">VW Recall Calculator</li>
+						<li><a href="#">Terms Of Services</li>
+						<li><a href="#">Privacy Policy</li>
+					</ul>
+				</a>
+			</li>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+            <li id="padding"><a id="c" data-target="#login" data-toggle="modal">Sign Up / Log In<br/><span> <img src="icons/login.png"></span></a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="modal" tabindex="-1" id="login">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputUserName">Username</label>
+                        <input class="form-control" placeholder="Login Username" type="text" id="inputUserName" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input class="form-control" placeholder="Login Password" type="password" id="inputPassword" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ 
+<div class="container-fluid"> 
+	<div class="row" >
+		<div class="col-lg-2" id="filter">
+			<h4 ><span> <img src="icons/filter.png"</span>Filters&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" id="clear"> Clear</a></h4>
+			<hr/>
+			<form id="form">
+				<div class="form-group">
+					<label for="dropdown"> Make and Model</label>
+					<select class="form-control" name="make">
+						<option value="Make">Make</option>
+						<option value="Audi">Audi</option>
+						<option value="Acura">Acura</option>
+						<option value="Alfa Romeo">Alfa Romeo</option>
+						<option value="BMW">BMW</option>
+						<option value="Bagatti">Bagatti</option>
+						<option value="Chrevelot">Chrevelot</option>
+						<option value="Dodge">Dodge</option>
+						<option value="Ferrari">Ferrari</option>
+						<option value="FIAT">FIAT</option>
+						<option value="GEO">GEO</option>
+						<option value="Honda">Honda</option>
+						<option value="Maserati">Maserati</option>
+						<option value="Porshe">Porshe</option>
+						<option value="Jaguar">Jaguar</option>
+						<option value="Tesla">Tesla</option>
+						<option value="Volkwagen">Volkswagen</option>
+						<option value="Toyota">Toyota</option>
+					</select><br><br>
+				</div>
+				<select class="form-control"name="model">
+					<option value="model">model</option>
+				</select>
+				<hr/>
+			</form>
+				
+				<label for="price">Price</label>
+				<form class="form-inline">
+					<div class="form-group">
+						<select class="form-control" name="Min">
+							<option value="Min">Min</option>
+							<option value="$0">$0</option>
+							<option value="$1,000">$1,000</option>
+							<option value="$5,000">5,000</option>
+							<option value="$10,000">$1,000</option>
+							<option value="$15,000">$15,000</option>
+							<option value="$20,000">$20,000</option>
+							<option value="$25,000">$25,000</option>
+							<option value="$35,000">$35,000</option>
+							<option value="$50,000">$50,000</option>
+							<option value="$75,000">$75,000</option>
+							<option value="$100,000">$100,000</option>
+							<option value="$125,000">$125,000</option>
+							<option value="$135,000">$135,000</option>
+							<option value="$150,000">$150,000</option>
+							<option value="$160,000">$160,000</option>
+							<option value="$175,000">$175,000</option>
+							<option value="$190,000">$190,000</option>
+							<option value="$200,000">$200,000</option>
+						</select>
+						</div>
+						<div class="form-group">
+						<select class="form-control" name="Max">
+							<option value="Max">Max</option>
+							<option value="$0">$0</option>
+							<option value="$1,000">$1,000</option>
+							<option value="$5,000">5,000</option>
+							<option value="$10,000">$1,000</option>
+							<option value="$15,000">$15,000</option>
+							<option value="$20,000">$20,000</option>
+							<option value="$25,000">$25,000</option>
+							<option value="$35,000">$35,000</option>
+							<option value="$50,000">$50,000</option>
+							<option value="$75,000">$75,000</option>
+							<option value="$100,000">$100,000</option>
+							<option value="$125,000">$125,000</option>
+							<option value="$135,000">$135,000</option>
+							<option value="$150,000">$150,000</option>
+							<option value="$160,000">$160,000</option>
+							<option value="$175,000">$175,000</option>
+							<option value="$190,000">$190,000</option>
+							<option value="$200,000">$200,000</option>
+						</select>
+					</div>		
+				</form>
+				<hr>
+					<label>Mileage</label>
+					<form class="form-inline">
+						<div class="form-group">
+							<select class="form-control" name="Min">
+								<option value="Min">Min</option>
+								<option value="0 miles">0 miles</option>
+								<option value="25,000 miles">25,000 miles</option>
+								<option value="50,000 miles">50,000 miles</option>
+								<option value="100,000 miles">100,000 miles</option>
+								<option value="150,000">150,000 miles</option>
+								<option value="200,000">200,000 miles</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<select class="form-control" name="Max">
+								<option value="Max">Max</option>
+								<option value="0 miles">0 miles</option>
+								<option value="25,000 miles">25,000 miles</option>
+								<option value="50,000 miles">50,000 miles</option>
+								<option value="100,000 miles">100,000 miles</option>
+								<option value="150,000">150,000 miles</option>
+								<option value="200,000">200,000 miles</option>
+							</select>
+						</div>
+					</form>
+				<hr>
+					<label>Year</label>
+					<form class="form-inline">
+						<div class="form-group">
+							<select class="form-control" name="Min">
+								<option value="Min">Min</option>
+								<option value="2016">2016 </option>
+								<option value="2013">2013</option>
+								<option value="2010"> 2010</option>
+								<option value="2005">2005</option>
+								<option value="2000">2000</option>
+								<option value="1998">1998</option>
+								<option value="1995">1995</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<select class="form-control" name="Min">
+								<option value="Max">Max</option>
+								<option value="2016">2016 </option>
+								<option value="2013">2013</option>
+								<option value="2010"> 2010</option>
+								<option value="2005">2005</option>
+								<option value="2000">2000</option>
+								<option value="1998">1998</option>
+								<option value="1995">1995</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+							</select>
+						</div>
+					</form>
+					<hr>
+					<form id="form">
+						<div class="form-group">
+							<label for="dropdown">Features </label>
+							<select class="form-control" name="features">
+								<option value="" disabled selected>Add Features</option>
+								<option value="AM/FM radio">AM/FM radio</option>
+								<option value="AUX port">AUX port</option>
+								<option value="Bluetooth">Bluetooth</option>
+								<option value="CD Player">CD Player</option>
+								<option value="Garrage Opener">Garrage Opener</option>
+								<option value="Cooled Seats">Cooled Seats</option>
+								<option value="Power Seats">Power Seats</option>
+								<option value="Remote start">Remote start</option>
+								<option value="Navigation">Navigation</option>
+								<option value="Rain sensing wipers">Rain sensing wipers</option>
+								<option value="USB Port">USB Port</option>
+								<option value="USB charger">USB charger</option>
+								<option value="HID headlights">HID headlights</option>
+								<option value="Pre-collision Warning">Pre-collision Warning</option>
+							</select>
+							<hr>
+						</div>
+					</form>
+					<label>	Transmission</label><br>
+					<form class="form-inline" >
+						
+							<div class="form-group span12" >
+								<button class="form-control btn btn-block btn-primary"> Automatic  </button>		
+							</div>
+							<div class="form-group span12">
+								<button class="form-control btn btn-block btn-primary">Manual</button>		
+							</div>
+						
+					</form>
+					<hr>
+					<form id="form">
+						<div class="form-group">
+							<label for="dropdown">Categories </label>
+							<select class="form-control" name="category">
+								<option value="" disabled selected>Add Categories</option>
+								<option value="Convertibles">Convertibles</option>
+								<option value="Coupes">Coupes</option>
+								<option value="Crossovers">Crossovers</option>
+								<option value="Electrics">Electrics</option>
+								<option value="Hatchbacks">Hatchbacks</option>
+								<option value="Hybrids">Hybrids</option>
+								<option value="Luxury">Luxury</option>
+								<option value="SUVs">SUVs</option>
+								<option value="Sedans">Sedans</option>
+								<option value="Trucks">Trucks</option>
+								<option value="Wagons">Wagons</option>
+							</select>
+							<hr>
+						</div>
+					</form>
+					<hr>
+					<div class="span12">
+						<button class="btn btn-block btn-primary"> Save Your Search </button>
+					</div>
+					<hr>
+		</div>
+		<div class="col-lg-9">
+			<form class="form-inline">
+				<label><span> <img src="icons/location.png"></span> Location </label>
+				<div class="form-group">
+					<input class="form-control" type="text" placeholder="Enter ZIP Code">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</div>
+				<label> Distance </label>
+				<div class="form-group">
+					<select class="form-control" name="distance">
+					<option value="10 miles">10 miles</option>
+					<option value="25 miles">25 miles</option>
+					<option value="35 miles">35 miles</option>
+					<option value="50 miles">50 miles</option>
+					<option value="100 miles">100 miles</option>	
+					<option value="200 miles">200 miles</option>
+					<option value="300 miles">300 miles</option>
+					</select>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</div>
+				<label> Sorting by</label>
+				<div class="form-group">
+					<select class="form-control" name="sort">
+					<option value="best match">best match</option>
+					<option value="price">price</option>
+					<option value="year">year</option>
+					</select>
+				</div>
+			</form>
+		</div>
+		<br/>
+		<hr>
+		<br/>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/BMW6series.jpg" class="thumbnail">
+					<img src="images/BMW6series.jpg"/>
+					<p> BMW 6 Series <span id="heart"> <img src="icons/heart.png"></span><br> $36,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/acura.jpg" class="thumbnail">
+					<img src="images/acura.jpg"/>
+					<p> Acura TL 3.2 <span id="heart"> <img src="icons/heart.png"></span><br> $2,300</br></p>
+				</a>
+			</div>
+			
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/lexus.jpg" class="thumbnail">
+					<img src="images/lexus.jpg"/>
+					<p> Lexus XYZ <span id="heart"> <img src="icons/heart.png"></span><br> $3,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/Ford.jpg" class="thumbnail">
+					<img src="images/Ford.jpg"/>
+					<p> Ford <span id="heart"> <img src="icons/heart.png"></span> <br> $31,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/Lincoln.jpg" class="thumbnail">
+					<img src="images/Lincoln.jpg"/>
+					<p> Lincoln <span id="heart"> <img src="icons/heart.png"></span><br> $8,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/infiniti.jpg" class="thumbnail">
+					<img src="images/infiniti.jpg"/>
+					<p> infiniti <span id="heart"> <img src="icons/heart.png"></span><br> $4,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/lexus.jpg" class="thumbnail">
+					<img src="images/lexus.jpg"/>
+					<p> Lexus 3.2 <span id="heart"> <img src="icons/heart.png"></span><br> $12,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/jeep.jpg" class="thumbnail">
+					<img src="images/jeep.jpg"/>
+					<p> Jeep xyz<span id="heart"> <img src="icons/heart.png"></span><br> $1,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/jeep.jpg" class="thumbnail">
+					<img src="images/jeep.jpg"/>
+					<p> Jeep<span id="heart"> <img src="icons/heart.png"></span><br> $1,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/BMW6series.jpg" class="thumbnail">
+					<img src="images/BMW6series.jpg"/>
+					<p> BMW 6 Series <span id="heart"> <img src="icons/heart.png"></span><br> $31,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/HondaAccord.jpg" class="thumbnail">
+					<img src="images/HondaAccord.jpg"/>
+					<p> Honda Accord <span id="heart"> <img src="icons/heart.png"></span><br> $3,700</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/BMW6series.jpg" class="thumbnail">
+					<img src="images/BMW6series.jpg"/>
+					<p> BMW 6 Series <span id="heart"> <img src="icons/heart.png"></span><br> $31,000</br></p>
+				</a>
+			</div>
+			
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/Toyota.jpg" class="thumbnail">
+					<img src="images/Toyota.jpg"/>
+					<p>Toyota XYZ <span id="heart"> <img src="icons/heart.png"></span><br> $23,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/lexus.jpg" class="thumbnail">
+					<img src="images/lexus.jpg"/>
+					<p> Lexus xyz <span id="heart"> <img src="icons/heart.png"></span><br> $14,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/LandRover.jpg" class="thumbnail">
+					<img src="images/LandRover.jpg"/>
+					<p> LandRover <span id="heart"> <img src="icons/heart.png"></span> <br> $5,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/minicooper.jpg" class="thumbnail">
+					<img src="images/minicooper.jpg"/>
+					<p> Mini Cooper Base<span id="heart"> <img src="icons/heart.png"></span> <br> $31,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/LandRover.jpg" class="thumbnail">
+					<img src="images/LandRover.jpg"/>
+					<p> LandRover<span id="heart"> <img src="icons/heart.png"></span> <br> $5,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/minicooper.jpg" class="thumbnail">
+					<img src="images/minicooper.jpg"/>
+					<p> Mini Cooper Base<span id="heart"> <img src="icons/heart.png"></span> <br> $31,000</br> </p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/lexus.jpg" class="thumbnail">
+					<img src="images/lexus.jpg"/>
+					<p> Lexus xyz <span id="heart"> <img src="icons/heart.png"></span><br> $31,000</br> </p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/dodge.jpg" class="thumbnail">
+					<img src="images/dodge.jpg"/>
+					<p> Dodge Charger<span id="heart"> <img src="icons/heart.png"></span> <br> $31,000</br> </p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/BMW6series.jpg" class="thumbnail">
+					<img src="images/BMW6series.jpg"/>
+					<p> BMW 6 Series <span id="heart"> <img src="icons/heart.png"></span><br> $31,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/BMW6series.jpg" class="thumbnail">
+					<img src="images/BMW6series.jpg"/>
+					<p> BMW 6 Series <span id="heart"> <img src="icons/heart.png"></span><br> $31,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/mazda.jpg" class="thumbnail">
+					<img src="images/mazda.jpg"/>
+					<p> Mazda <br><span id="heart"> <img src="icons/heart.png"></span> $31,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/mercedes.jpg" class="thumbnail">
+					<img src="images/mercedes.jpg"/>
+					<p> Mercedes <span id="heart"> <img src="icons/heart.png"></span><br> $46,000</br></p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="images/volkswagen.jpg" class="thumbnail">
+					<img src="images/volkswagen.jpg"/>
+					<p> Ford <span id="heart"> <img src="icons/heart.png"></span><br> $2,300</br></p>
+				</a>
+			</div>
+			<hr>
+			<br/>
+	<div class="container text-center">	
+		<ul class="pagination pagination-lg" >
+			<li> <a href="#">&laquo;</a></li>
+			<li> <a href="#">1</a></li>
+			<li> <a href="#">2</a></li>
+			<li class="active"> <a href="#">3</a></li>
+			<li> <a href="#">4</a></li>
+			<li> <a href="#">5</a></li>
+			<li> <a href="#">&raquo;</a></li>
+		</ul>
+		</div>
+	</div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<h3> Find Cars From Your Phone</h3><br/>
+				<p>Instamotor's free app helps you find used cars for sale 
+				directly by the owner. Buying and selling a used car has 
+				never been safer and easier.</p>
+				<br/>
+				<form class="form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Enter phone number"/>
+					</div>
+					<div class="form-group">
+						<button type="btn btn-block btn-primary" class="form-control"> Send </button>
+					</div>
+				</form>
+			</div>
+			<div class="vertical"></div>
+			<div class="col-sm-3">
+				<h3>INSTAMOTOR</h3>
+				<ul type="none">
+					<li><a href="#">About</a></li>
+					<li><a href="#">Trust & Safety</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">VW Recall Calculator</a></li>
+					<li><a href="#">Terms Of Services</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+				</ul>
+			</div>
+			
+			<div class="col-sm-4">
+					<h3> CARS FOR SALE </h3>
+				<ul type="none">
+					<li><a href="#">Below $10,000</a></li>
+					<li><a href="#">Below $20,000</a></li>
+					<li><a href="#">Below $30,000</a></li>
+					<li><a href="#">Above $50,000</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<hr>
+<div class="text-center" id="copy">
+	<h4>Copyright &copy; 2017 Rajat Thukral</h4>
+	<h4>Contact</h4>
+	<p><span> <img src="icons/gmail.png"></span> rajatthukral1708@gmail.com
+	<p><span> <img src="icons/phone.png"></span> +91-8719801070
+</div>	
+</footer>
+
+</body>
+</html>
