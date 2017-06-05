@@ -1,31 +1,67 @@
 #nav{
 	border: 1px solid white;
 	background-color: white;
+	height: 57px;
 	padding-top: 4px;
 	padding-bottom:4px;
 }
+#nav2{
+	background-color: white;
+	padding-top:15px;
+}
+
 #right{
-	padding-top:3px;
+	float: right;
 }
 #brand{
-	font: bold 20px Tahoma
+	font: bold 23px Tahoma
  }
 #brand:hover{
-	color: #800000;
+	color: #26a274;
 	
  }
-	.pull{
+.pull{
 	 float: right;
  }
 #padding{
 	 padding-top:22px;
 	 font-size: 22px;
  }
+.v{
+	 border-left: 2px solid black;
+	height: 50px;
+	float: left;	
+ }
+ .thumbnail{
+	background-color: #DCDCDC;
+	border: 1px solid #DCDCDC;
+	display:block;
+	width:100%;
+	height:400px;
+	 
+ }
+ .thumbnail:hover{
+	 background-color: white;
+	 -webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
+	 	
+ }
+.button{
+	padding-top: 20px;	
+}
+#c{
+	font: 16px Tahoma;
+}
+#d{
+	font: 16px Tahoma;
+}		
  
-
  #c:hover{
-	 color: #800000;
-	 border-bottom: 3px solid red;
+	 color: #26a274;
+	 border-bottom: 2px solid #26a274;
+ }
+#d:hover{
+	 color: #26a274;
+	 	 
  }
 #heart{
 	float: right;
@@ -34,41 +70,77 @@
 #filter{
 	 border: 1px white;
 	 background-color: white;
-	 margin: 2px;
+	 margin: 0px;
  }
 #clear{
-	 text-align: right;
+	 float: right;
  }
 
  #grid_view{
 	 text-align:right;
 	 border: 1px solid black;
  }
- #Complete_bg{
-	 background-color: 	#D3D3D3;
-	 padding-top: 160px;
+ 
+ 
+#main{
+	background-color: #DCDCDC;
+	padding-top:80px;	
 }
-#dropdown{
-	width:100%
+.filter_pad{
+	padding-top: 150px;
 }
 #pad{
 	margin: 4px;
 	padding-right:5px;
 }
 .footer{
-	background-color: black;
-	color: white;
+	background-color: #A9A9A9;
+	color: black;
 	padding-top: 100px;
-	padding-bottom: 100px;
-	border-top: 2px solid gray;
-	border-bottom: 3px solid white;
+	padding-bottom: 0px;
+	border-top: 1px solid blue;
+	border-bottom: 3px solid blue;
 }
 .vertical{
-	border-left: 2px solid white;
+	border-left: 1px solid blue;
 	height: 260px;
 	float: left;	
 }
 #copy{
 	padding-top:100px;
 	padding-bottom:10px;
+}
+#color{
+	color:#DAA520;
+}
+#border{
+	padding-top:5px;
+	border: 1px solid black;
+}
+#login{
+	padding-top: 2px;
+}
+.button{
+	padding-top: 150px;
+}
+.pagination li.active a {
+  background-color: #26a274;
+ }
+.pagination li.active a:hover {
+  background-color: #26a274;
+ }
+ .left{
+	float: left;	
+ }
+ .right_side{
+	 float:right
+ }
+#head_footer{
+	font:  bold 20px Tahoma;
+}
+#para_footer{
+	font: 18px Tahoma; 
+}
+#list_footer{
+	font: bold 20px Rubik; 
 }
